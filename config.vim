@@ -52,7 +52,10 @@ set visualbell
 " --------------------
 " Sane Ignore For ctrlp
 " --------------------
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/*,*/.bundle/*,*/log/*,*/coverage/*
+
 let g:ctrlp_custom_ignore = {
-  \ 'dir':   '\.git$\|\.hg$\|\.svn$\|\.yardoc\|public\/images\|public\/system\|data\|log\|tmp$',
-  \ 'file': '\.exe$\|\.so$\|\.dat$'
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links'
   \ }
